@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Saya | Portfolio Blog</title>
+    <title>Blog | Featured Articles</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,36 +11,48 @@
         <nav>
             <div class="logo">MyPortfolio</div>
             <ul>
-                <li><a href="index.html">Utama</a></li>
-                <li><a href="about.html" class="active">Tentang Saya</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Hubungi</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button id="theme-toggle">Tukar Mod</button>
+            <button id="theme-toggle">Toggle Mode</button>
         </nav>
     </header>
 
     <main class="container">
-        <section class="about-section">
-            <h2>Tentang Diri Saya</h2>
-            <div class="about-content">
-                <p>Hai! Saya seorang pembangun aplikasi dan pereka kandungan kreatif yang bercita-cita tinggi. Menggabungkan logik pengaturcaraan dan estetika visual adalah minat utama saya.</p>
-                
-                <h3>Kemahiran Teknikal</h3>
-                <ul class="skills-list">
-                    <li>Pembangunan Web (HTML, CSS, JavaScript)</li>
-                    <li>Pembangunan Realiti Terimbas (AR) & Unity</li>
-                    <li>Permodelan 3D (Blender)</li>
-                </ul>
+        <section class="blog-section">
+            <h2>Featured Articles</h2>
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <span class="tag">Technology</span>
+                    <h3>Exploring AR in Heritage Preservation</h3>
+                    <p class="date">Published: June 3, 2026</p>
+                    <p>How modern frameworks like Augmented Reality (AR) can bring historical landmarks to life, offering an immersive educational experience for the younger generation.</p>
+                </article>
 
-                <h3>Pendidikan</h3>
-                <p><strong>Universiti Sultan Zainal Abidin (UniSZA)</strong><br>Ijazah Sarjana Muda Teknologi Maklumat (Pembangunan Perisian)</p>
+                <!-- Post 2 -->
+                <article class="blog-card">
+                    <span class="tag">Programming</span>
+                    <h3>The Importance of Git in Development</h3>
+                    <p class="date">Published: June 1, 2026</p>
+                    <p>Version control is a lifesaver. Learn the best practices for managing your repository and tracking meaningful project commits efficiently.</p>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card">
+                    <span class="tag">Design</span>
+                    <h3>3D Modeling Basics: Light Setup</h3>
+                    <p class="date">Published: May 25, 2026</p>
+                    <p>A quick breakdown of how standard three-point lighting layouts can turn your plain 3D meshes into production-ready visual renders.</p>
+                </article>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Hak Cipta Terpelihara | Ditulis dengan ❤️</p>
+        <p>&copy; 2026 All Rights Reserved | Built with ❤️</p>
     </footer>
 
     <script src="script.js"></script>
