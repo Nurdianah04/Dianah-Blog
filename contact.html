@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Saya | Portfolio Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="index.html">Utama</a></li>
+                <li><a href="about.html">Tentang Saya</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Hubungi</a></li>
+            </ul>
+            <button id="theme-toggle">Tukar Mod</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="contact-section">
+            <h2>Hubungi Saya</h2>
+            <p>Mempunyai sebarang soalan, cadangan projek, atau peluang kerjaya? Isikan borang di bawah.</p>
+            
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama Penuh:</label>
+                    <input type="text" id="name" name="name" required placeholder="Masukkan nama anda">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mel:</label>
+                    <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesej:</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tuliskan mesej anda di sini..."></textarea>
+                </div>
+                <button type="submit" class="btn">Hantar Mesej</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hak Cipta Terpelihara | Ditulis dengan ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
