@@ -56,8 +56,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* GAMBAR DIBAWAH TELAH DIUBAH KEPADA JPG TEMPATAN ANDA */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/background.jpg') no-repeat center center/cover;
+    /* KEMAS KINI DI SINI: Menggunakan gambar PNG lokal dari laptop */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/background.png') no-repeat center center/cover;
     color: white;
     padding: 0 20px;
 }
