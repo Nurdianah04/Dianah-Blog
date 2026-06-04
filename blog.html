@@ -1,60 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Featured Articles</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Blog | My Personal Blog</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <header>
+        <div class="logo">MyBlog.</div>
         <nav>
-            <div class="logo">MyPortfolio</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button id="theme-toggle">Toggle Mode</button>
         </nav>
+        <button id="theme-toggle">🌙 Mode</button>
     </header>
 
     <main class="container">
-        <section class="blog-section">
-            <h2>Featured Articles</h2>
-            <div class="blog-grid">
-                <!-- Post 1 -->
-                <article class="blog-card">
-                    <span class="tag">Technology</span>
-                    <h3>Exploring AR in Heritage Preservation</h3>
-                    <p class="date">Published: June 3, 2026</p>
-                    <p>How modern frameworks like Augmented Reality (AR) can bring historical landmarks to life, offering an immersive educational experience for the younger generation.</p>
-                </article>
+        <h2>Artikel Terkini</h2>
+        <div class="blog-grid">
+            
+            <!-- Artikel 1 -->
+            <article class="blog-card">
+                <h3>Langkah Pertama Belajar GitHub</h3>
+                <p class="date">Dipos pada: Juni 4, 2026</p>
+                <p>GitHub merupakan platform penting bagi pembangun perisian untuk menyimpan kod dan berkolaborasi. Menggunakan sistem kawalan versi (Git) membantu menjejaki setiap perubahan...</p>
+                <a href="#" class="read-more">Baca Lanjut &rarr;</a>
+            </article>
 
-                <!-- Post 2 -->
-                <article class="blog-card">
-                    <span class="tag">Programming</span>
-                    <h3>The Importance of Git in Development</h3>
-                    <p class="date">Published: June 1, 2026</p>
-                    <p>Version control is a lifesaver. Learn the best practices for managing your repository and tracking meaningful project commits efficiently.</p>
-                </article>
+            <!-- Artikel 2 -->
+            <article class="blog-card">
+                <h3>Kenapa Reka Bentuk Web Responsif Penting?</h3>
+                <p class="date">Dipos pada: Mei 28, 2026</p>
+                <p>Hari ini, sebahagian besar pengguna melayari internet menggunakan telefon pintar. Oleh itu, membina laman web yang mesra peranti mudah alih adalah satu kewajipan.</p>
+                <a href="#" class="read-more">Baca Lanjut &rarr;</a>
+            </article>
 
-                <!-- Post 3 -->
-                <article class="blog-card">
-                    <span class="tag">Design</span>
-                    <h3>3D Modeling Basics: Light Setup</h3>
-                    <p class="date">Published: May 25, 2026</p>
-                    <p>A quick breakdown of how standard three-point lighting layouts can turn your plain 3D meshes into production-ready visual renders.</p>
-                </article>
-            </div>
-        </section>
+            <!-- Artikel 3 -->
+            <article class="blog-card">
+                <h3>Pengalaman Membina Projek AR Pertama</h3>
+                <p class="date">Dipos pada: April 15, 2026</p>
+                <p>Teknologi Augmented Reality (AR) membuka peluang besar dalam sektor pendidikan dan warisan. Pengalaman mengintegrasikan model 3D ke dalam dunia realiti amat menyeronokkan!</p>
+                <a href="#" class="read-more">Baca Lanjut &rarr;</a>
+            </article>
+
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 All Rights Reserved | Built with ❤️</p>
+        <p>&copy; 2026 My Personal Blog. Built for CSD 34203 Project.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

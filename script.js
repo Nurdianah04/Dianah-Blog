@@ -1,23 +1,26 @@
+// Dapatkan rujukan butang toggle
 const themeToggleBtn = document.getElementById('theme-toggle');
 
-// Check if the user has a saved dark mode preference
+// Semak mod yang disimpan dalam local storage jika ada
 const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggleBtn.textContent = 'Light Mode'; // If dark mode is active, show "Light Mode"
-} else {
-    themeToggleBtn.textContent = 'Dark Mode';  // Otherwise, default to "Dark Mode"
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+        themeToggleBtn.textContent = '☀️ Mode';
+    }
 }
 
+// Fungsi menukar tema
 themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+    let theme = document.documentElement.getAttribute('data-theme');
     
-    // Change the button text dynamically based on the current mode
-    if (document.body.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = 'Light Mode';
-        localStorage.setItem('theme', 'dark');
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        themeToggleBtn.textContent = '🌙 Mode';
     } else {
-        themeToggleBtn.textContent = 'Dark Mode';
-        localStorage.removeItem('theme');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggleBtn.textContent = '☀️ Mode';
     }
 });
