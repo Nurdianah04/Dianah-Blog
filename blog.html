@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Posts | Blog Peribadi Saya</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Blog | Featured Articles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">MyBlog</div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="blog.html" class="active">Blog</a>
-            <a href="contact.html">Contact</a>
-            <button id="theme-toggle">🌙 Mode</button>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">Toggle Mode</button>
         </nav>
     </header>
 
     <main class="container">
-        <h2>Artikel Terkini</h2>
-        <div class="blog-grid">
-            <article class="blog-card">
-                <h3>1. Perjalanan Membina Aplikasi AR Pertama</h3>
-                <p class="date">Diterbitkan pada: 15 Mei 2026</p>
-                <p>Meneroka teknologi Augmented Reality (AR) membuka mata saya tentang bagaimana elemen digital boleh digabungkan dengan dunia realiti untuk pendidikan...</p>
-            </article>
+        <section class="blog-section">
+            <h2>Featured Articles</h2>
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <span class="tag">Technology</span>
+                    <h3>Exploring AR in Heritage Preservation</h3>
+                    <p class="date">Published: June 3, 2026</p>
+                    <p>How modern frameworks like Augmented Reality (AR) can bring historical landmarks to life, offering an immersive educational experience for the younger generation.</p>
+                </article>
 
-            <article class="blog-card">
-                <h3>2. Kepentingan Struktur Kod yang Kemas di GitHub</h3>
-                <p class="date">Diterbitkan pada: 1 Jun 2026</p>
-                <p>Menguruskan kod menggunakan Git bukan sekadar untuk sandaran (*backup*), tetapi ia mempamerkan disiplin dan cara kerja profesional seorang pembangun...</p>
-            </article>
-        </div>
+                <!-- Post 2 -->
+                <article class="blog-card">
+                    <span class="tag">Programming</span>
+                    <h3>The Importance of Git in Development</h3>
+                    <p class="date">Published: June 1, 2026</p>
+                    <p>Version control is a lifesaver. Learn the best practices for managing your repository and tracking meaningful project commits efficiently.</p>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card">
+                    <span class="tag">Design</span>
+                    <h3>3D Modeling Basics: Light Setup</h3>
+                    <p class="date">Published: May 25, 2026</p>
+                    <p>A quick breakdown of how standard three-point lighting layouts can turn your plain 3D meshes into production-ready visual renders.</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Blog Peribadi Saya. Hak Cipta Terpelihara.</p>
+        <p>&copy; 2026 All Rights Reserved | Built with ❤️</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
