@@ -75,7 +75,7 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-/* Gaya Butang Toggle Pilihan Anda */
+/* Gaya Butang Toggle */
 .toggle-btn {
     background: #333;
     color: #fff;
@@ -155,7 +155,37 @@ h3 {
     color: var(--heading-color);
 }
 
-/* Gaya Halaman About */
+/* KEMAS KINI: Gaya Halaman About (Susunan Flexbox & Gambar) */
+.about-content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.about-profile-pic {
+    flex: 1;
+    max-width: 280px;
+}
+
+.about-profile-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border: 3px solid var(--card-bg); /* Bingkai bertukar mengikut tema */
+    object-fit: cover;
+    transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.about-profile-pic img:hover {
+    transform: scale(1.02);
+}
+
+.about-text {
+    flex: 2;
+}
+
 .skills-list {
     margin-left: 20px;
     margin-top: 10px;
@@ -262,39 +292,4 @@ footer {
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 15px 20px;
-    }
-
-    .navbar .logo {
-        margin-bottom: 12px;
-    }
-
-    .nav-links {
-        width: 100%;
-        justify-content: space-around;
-        padding-left: 0;
-        margin-bottom: 12px;
-    }
-
-    .nav-links li {
-        margin: 0;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-    }
-
-    .hero-content p {
-        font-size: 15px;
-    }
-    
-    footer {
-        position: relative;
-        margin-top: 40px;
-    }
-    
-    .container {
-        padding-bottom: 40px;
-        margin: 20px auto;
-    }
-}
+        padding: 15px
