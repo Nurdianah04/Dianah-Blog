@@ -1,4 +1,6 @@
-/* Tetapan Asas Universalan */
+/* ==========================================
+   1. UNIVERSAL & BASE STYLES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +14,15 @@ body {
     line-height: 1.6;
 }
 
-/* Gaya Navbar */
+/* ==========================================
+   2. NAVIGATION BAR
+   ========================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1a1a1a; /* Tema gelap korporat */
-    padding: 20px 10px;
+    padding: 20px 5%; /* Using percentage padding for better fluid layout scaling */
     color: white;
 }
 
@@ -49,7 +53,9 @@ body {
     border-bottom: 2px solid #ffffff;
 }
 
-/* Gaya Hero Section (Laman Utama) */
+/* ==========================================
+   3. HERO SECTION (HOME PAGE)
+   ========================================== */
 .hero-section {
     height: 80vh;
     display: flex;
@@ -87,23 +93,13 @@ body {
     background-color: #ddd;
 }
 
-/* Gaya Footer */
-footer {
-    background-color: #1a1a1a;
-    color: #888;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Susun Atur Kandungan Am */
+/* ==========================================
+   4. GENERAL CONTENT LAYOUT (About, Blog, Contact)
+   ========================================== */
 .container {
     max-width: 1000px;
     margin: 40px auto;
-    padding: 0 20px 100px 20px; /* Jarak bawah ditambah supaya tidak ditutup footer */
+    padding: 0 20px 120px 20px; /* Jarak bawah ditambah supaya tidak ditutup footer */
 }
 
 h2 {
@@ -187,4 +183,63 @@ h3 {
 
 .submit-btn:hover {
     background-color: #333;
+}
+
+/* ==========================================
+   5. FOOTER STYLES
+   ========================================== */
+footer {
+    background-color: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ==========================================
+   6. MOBILE RESPONSIVE MEDIA QUERIES (NEW)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Stack Navbar links cleanly on mobile screens */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+        padding-left: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    /* Adjust font sizing on the hero component to prevent overlapping or clipping */
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    /* Change fixed footer to block element to prevent it from covering content on short mobile layouts */
+    footer {
+        position: relative;
+        margin-top: 40px;
+    }
+    
+    .container {
+        padding-bottom: 40px;
+        margin: 20px auto;
+    }
 }
