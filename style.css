@@ -155,7 +155,7 @@ h3 {
     color: var(--heading-color);
 }
 
-/* KEMAS KINI: Gaya Halaman About (Susunan Flexbox & Gambar) */
+/* KEMAS KINI: Gaya Halaman About (Susunan Flexbox & Gambar Bulat) */
 .about-content-wrapper {
     display: flex;
     gap: 40px;
@@ -170,11 +170,11 @@ h3 {
 
 .about-profile-pic img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    aspect-ratio: 1 / 1; /* Mengekalkan nisbah kotak sekata */
+    border-radius: 50%;   /* Mengubah imej menjadi bentuk bulatan (Circle) */
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border: 3px solid var(--card-bg); /* Bingkai bertukar mengikut tema */
-    object-fit: cover;
+    border: 3px solid var(--card-bg); /* Bingkai dinamik mengikut tema */
+    object-fit: cover;   /* Mengelakkan gambar muka menjadi penyek */
     transition: transform 0.3s ease, border-color 0.3s;
 }
 
@@ -287,9 +287,58 @@ footer {
 }
 
 /* ==========================================
-   6. MOBILE RESPONSIVE MEDIA QUERIES
+   6. MOBILE RESPONSIVE MEDIA QUERIES (DIBAIKI)
    ========================================== */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 15px
+        padding: 15px 20px;
+    }
+
+    .navbar .logo {
+        margin-bottom: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+        padding-left: 0;
+        margin-bottom: 12px;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .about-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-profile-pic {
+        max-width: 220px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    footer {
+        position: relative;
+        margin-top: 40px;
+    }
+    
+    .container {
+        padding-bottom: 40px;
+        margin: 20px auto;
+    }
+}
