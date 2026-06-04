@@ -1,69 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dianah Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dianah | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Menyertakan Font Inter untuk tulisan yang lebih premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <h2>DIANAH</h2>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <!-- Navigasi Atas yang Terapung -->
+    <header>
+        <nav>
+            <div class="logo">Dianah.</div>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-    <h1>Hi, I'm Dianah</h1>
-    <p>Frontend Developer Student</p>
-</section>
+    <!-- KANDUNGAN UTAMA (Single Page Layout) -->
+    <main>
+        
+        <!-- 1. BAHAGIAN HOME (KAD PROFIL UTAMA) -->
+        <section id="home" class="page-section">
+            <div class="profile-card">
+                <div class="avatar-container">
+                    <div class="avatar-placeholder">D</div>
+                </div>
+                <h1>Dianah</h1>
+                <p class="subtitle">Software Development Student</p>
+                <p class="bio">Welcome to my personal space. I build interactive 3D environments, mobile applications, and modern web experiences.</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+                <a href="#about" class="btn">Explore Portfolio</a>
+            </div>
+        </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a student learning web development. I build modern and clean websites using HTML, CSS and JavaScript.</p>
-</section>
+        <!-- 2. BAHAGIAN ABOUT ME -->
+        <section id="about" class="page-section">
+            <div class="content-card">
+                <h2>About Me</h2>
+                <div class="card-line"></div>
+                <p>Hi, I'm Dianah, a final year Information Technology student specializing in Software Development. I love experimenting with augmented reality interface designs, structuring production-ready 3D assets, and writing clean code.</p>
+                
+                <h3>Technical Toolkit</h3>
+                <ul class="skills-list">
+                    <li><strong>Web Core:</strong> HTML5, CSS3, JavaScript (ES6)</li>
+                    <li><strong>3D & Graphics:</strong> Blender 4.5, Photoshop, Maya</li>
+                    <li><strong>AR & Engine:</strong> Unity, Vuforia, C# Scripting</li>
+                </ul>
 
-<!-- BLOG / PROJECT GRID -->
-<section id="blog" class="section dark">
-    <h2>My Works</h2>
+                <h3>Education</h3>
+                <p><strong>Universiti Sultan Zainal Abidin (UniSZA)</strong><br>Bachelor of Information Technology (Software Development)</p>
+            </div>
+        </section>
 
-    <div class="grid">
+        <!-- 3. BAHAGIAN BLOG / PROJECTS -->
+        <section id="blog" class="page-section">
+            <div class="content-card wide-card">
+                <h2>Featured Articles</h2>
+                <div class="card-line"></div>
+                
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <span class="tag">Technology</span>
+                        <h3>Exploring AR in Heritage Preservation</h3>
+                        <p class="date">June 2026</p>
+                        <p>An inside look at building interactive mobile applications that display digital history logs upon scanning heritage landmarks.</p>
+                    </article>
 
-        <div class="box">
-            <h3>Blog Website</h3>
-            <p>Simple personal blog project using HTML & CSS</p>
-        </div>
+                    <article class="blog-card">
+                        <span class="tag">Programming</span>
+                        <h3>Optimizing Unity Build Settings</h3>
+                        <p class="date">May 2026</p>
+                        <p>A step-by-step troubleshooting workflow for setting up Android SDK environments and enabling the export button seamlessly.</p>
+                    </article>
 
-        <div class="box">
-            <h3>Portfolio</h3>
-            <p>Modern portfolio design project</p>
-        </div>
+                    <article class="blog-card">
+                        <span class="tag">3D Design</span>
+                        <h3>Rigging Basics for Low-Poly Assets</h3>
+                        <p class="date">April 2026</p>
+                        <p>How properly mapped keyframe menus and clean bone hierarchies streamline the integration of 3D models into game engines.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <div class="box">
-            <h3>Landing Page</h3>
-            <p>Product landing page design</p>
-        </div>
+        <!-- 4. BAHAGIAN CONTACT -->
+        <section id="contact" class="page-section">
+            <div class="content-card">
+                <h2>Contact Me</h2>
+                <div class="card-line"></div>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Have any development queries or collaboration ideas? Drop a message!</p>
+                
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="yourname@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-    </div>
-</section>
+    </main>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: dianah@gmail.com</p>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 | Created for CSD34203 Portfolio</p>
+    </footer>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 Dianah Portfolio</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
