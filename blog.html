@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Featured Articles</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <<button id="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
 
-<header class="navbar">
-    <h2>DIANAH BLOG</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <main class="container">
+        <section class="blog-section">
+            <h2>Featured Articles</h2>
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <span class="tag">Technology</span>
+                    <h3>Exploring AR in Heritage Preservation</h3>
+                    <p class="date">Published: June 3, 2026</p>
+                    <p>How modern frameworks like Augmented Reality (AR) can bring historical landmarks to life, offering an immersive educational experience for the younger generation.</p>
+                </article>
 
-<section class="section">
-    <h1>My Blog</h1>
+                <!-- Post 2 -->
+                <article class="blog-card">
+                    <span class="tag">Programming</span>
+                    <h3>The Importance of Git in Development</h3>
+                    <p class="date">Published: June 1, 2026</p>
+                    <p>Version control is a lifesaver. Learn the best practices for managing your repository and tracking meaningful project commits efficiently.</p>
+                </article>
 
-    <div class="card-container">
+                <!-- Post 3 -->
+                <article class="blog-card">
+                    <span class="tag">Design</span>
+                    <h3>3D Modeling Basics: Light Setup</h3>
+                    <p class="date">Published: May 25, 2026</p>
+                    <p>A quick breakdown of how standard three-point lighting layouts can turn your plain 3D meshes into production-ready visual renders.</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-        <div class="card">
-            <h3>Day 1 Learning</h3>
-            <p>Today I learned how to create HTML structure.</p>
-        </div>
+    <footer>
+        <p>&copy; 2026 All Rights Reserved | Built with ❤️</p>
+    </footer>
 
-        <div class="card">
-            <h3>Day 2 CSS</h3>
-            <p>I learned how to style website using CSS.</p>
-        </div>
-
-        <div class="card">
-            <h3>Day 3 GitHub</h3>
-            <p>I uploaded my project to GitHub successfully.</p>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Dianah Blog</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
