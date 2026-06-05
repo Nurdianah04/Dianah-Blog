@@ -155,7 +155,7 @@ h3 {
     color: var(--heading-color);
 }
 
-/* DIBREK: Gaya Halaman About (Disesuaikan mengikut Gambar Kedudukan Anda) */
+/* Gaya Halaman About (Susunan Flexbox & Gambar Bulat Tetap) */
 .about-content-wrapper {
     display: flex;
     gap: 40px;
@@ -168,18 +168,21 @@ h3 {
     max-width: 280px;
 }
 
+/* KEMAS KINI: Memastikan imej dipotong bulat sempurna tanpa mengira nisbah asal gambar */
 .about-profile-pic img {
-    width: 100%;
-    /* Menggunakan border-radius 12px untuk bentuk petak berbucu lembut seperti gambar anda */
-    border-radius: 12px;   
+    width: 240px;          /* Dimensi kotak yang sekata (segi empat sama asal) */
+    height: 240px;         /* Dimensi tinggi yang sepadan dengan lebar */
+    border-radius: 50%;    /* Mengubah bucu kotak menjadi bulatan sempurna (Circle) */
+    display: block;
+    margin: 0 auto;        /* Memastikan kedudukan kekal di tengah jika skrin mengecil */
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border: 3px solid var(--card-bg); 
-    object-fit: cover;   
+    border: 3px solid var(--card-bg); /* Bingkai dinamik mengikut tema semasa */
+    object-fit: cover;     /* Mengelakkan gambar wajah menjadi penyek atau herot */
     transition: transform 0.3s ease, border-color 0.3s;
 }
 
 .about-profile-pic img:hover {
-    transform: scale(1.02);
+    transform: scale(1.04);
 }
 
 .about-text {
@@ -239,7 +242,7 @@ h3 {
     color: #ffffff !important;
 }
 
-/* KEMAS KINI: Ditukar dari kuning ke Sky Blue (#00bfff) */
+/* Kekal dalam warna Sky Blue (#00bfff) */
 .category-tag {
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -254,7 +257,7 @@ h3 {
     margin: 0;
 }
 
-/* KEMAS KINI: Anak panah ditukar ke Sky Blue (#00bfff) */
+/* Anak panah kekal warna Sky Blue (#00bfff) */
 .arrow-icon {
     font-size: 14px;
     color: #00bfff; 
@@ -370,7 +373,7 @@ h3 {
 }
 [data-theme="light"] .category-tag,
 [data-theme="light"] .arrow-icon {
-    color: #0077cc !important; /* Biru yang disesuaikan untuk tema cerah supaya kontras jelas */
+    color: #0077cc !important; /* Warna biru kontras yang disesuaikan untuk tema cerah */
 }
 
 /* ==========================================
