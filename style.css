@@ -286,7 +286,7 @@ h3 {
 /* Reka Bentuk Kad Portfolio Bersama Gambar */
 .blog-card {
     background: #222222 !important; 
-    border-radius: 6px;
+    border-radius: 8px; /* Ditambah kemasan bucu bulat lembut (8px) untuk kad */
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border: 1px solid #333;
@@ -304,7 +304,7 @@ h3 {
 /* Kontainer Penampung Imej Kad */
 .card-image {
     width: 100%;
-    height: 160px;
+    height: 180px; /* Diubah suai sedikit ketinggian kontainer visual imej agar kelihatan ideal */
     overflow: hidden;
     background: #1a1a1a;
     border-bottom: 1px solid #333;
@@ -313,7 +313,7 @@ h3 {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Mengekalkan keaslian nisbah mockup reka bentuk anda */
     transition: transform 0.5s ease;
 }
 
