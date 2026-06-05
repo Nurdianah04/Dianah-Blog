@@ -155,7 +155,7 @@ h3 {
     color: var(--heading-color);
 }
 
-/* Gaya Halaman About (Susunan Flexbox & Gambar Bulat) */
+/* DIBREK: Gaya Halaman About (Disesuaikan mengikut Gambar Kedudukan Anda) */
 .about-content-wrapper {
     display: flex;
     gap: 40px;
@@ -170,11 +170,11 @@ h3 {
 
 .about-profile-pic img {
     width: 100%;
-    aspect-ratio: 1 / 1; /* Kekal 1:1 segi empat sama sebelum dipotong bulat */
-    border-radius: 50%;   /* Mengubah bentuk imej menjadi bulatan sempurna (Circle) */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border: 3px solid var(--card-bg); /* Bingkai dinamik mengikut tema */
-    object-fit: cover;   /* Mengelakkan gambar muka daripada penyek */
+    /* Menggunakan border-radius 12px untuk bentuk petak berbucu lembut seperti gambar anda */
+    border-radius: 12px;   
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 3px solid var(--card-bg); 
+    object-fit: cover;   
     transition: transform 0.3s ease, border-color 0.3s;
 }
 
@@ -196,12 +196,12 @@ h3 {
 }
 
 /* ==========================================
-   GAYA HALAMAN BLOG (ACCORDION REKA BENTUK GELAP PREMIUM)
+   GAYA HALAMAN BLOG (ACCORDION REKA BENTUK GELAP DENGAN SKY BLUE)
    ========================================== */
 
 /* Struktur Utama Kotak Accordion */
 .portfolio-accordion {
-    background: #1e1e1e; /* Warna gelap premium sepadan dengan rujukan */
+    background: #1e1e1e; 
     border: 1px solid #333;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -239,10 +239,11 @@ h3 {
     color: #ffffff !important;
 }
 
+/* KEMAS KINI: Ditukar dari kuning ke Sky Blue (#00bfff) */
 .category-tag {
     font-size: 11px;
     letter-spacing: 1.5px;
-    color: #ffcc00; /* Warna kuning penyerlah emas */
+    color: #00bfff; 
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -253,9 +254,10 @@ h3 {
     margin: 0;
 }
 
+/* KEMAS KINI: Anak panah ditukar ke Sky Blue (#00bfff) */
 .arrow-icon {
     font-size: 14px;
-    color: #ffcc00;
+    color: #00bfff; 
     transition: transform 0.3s ease;
 }
 
@@ -280,14 +282,14 @@ h3 {
 
 /* Reka Bentuk Kad Portfolio Bersama Gambar */
 .blog-card {
-    background: #222222 !important; /* Kad dalaman yang sedikit cerah daripada latar */
+    background: #222222 !important; 
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border: 1px solid #333;
     display: flex;
     flex-direction: column;
-    padding: 0 !important; /* Membolehkan imej rapat ke penjuru kad */
+    padding: 0 !important; 
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
@@ -313,7 +315,7 @@ h3 {
 }
 
 .blog-card:hover .card-image img {
-    transform: scale(1.06); /* Kesan zum halus imej */
+    transform: scale(1.06); 
 }
 
 /* Ruangan Teks Kad */
@@ -365,6 +367,10 @@ h3 {
 }
 [data-theme="light"] .card-text p {
     color: #555;
+}
+[data-theme="light"] .category-tag,
+[data-theme="light"] .arrow-icon {
+    color: #0077cc !important; /* Biru yang disesuaikan untuk tema cerah supaya kontras jelas */
 }
 
 /* ==========================================
