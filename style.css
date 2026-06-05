@@ -155,7 +155,7 @@ h3 {
     color: var(--heading-color);
 }
 
-/* Gaya Halaman About (Susunan Flexbox & Gambar Bulat Tetap) */
+/* Gaya Halaman About */
 .about-content-wrapper {
     display: flex;
     gap: 40px;
@@ -168,16 +168,15 @@ h3 {
     max-width: 280px;
 }
 
-/* KEMAS KINI: Memastikan imej dipotong bulat sempurna tanpa mengira nisbah asal gambar */
 .about-profile-pic img {
-    width: 240px;          /* Dimensi kotak yang sekata (segi empat sama asal) */
-    height: 240px;         /* Dimensi tinggi yang sepadan dengan lebar */
-    border-radius: 50%;    /* Mengubah bucu kotak menjadi bulatan sempurna (Circle) */
+    width: 240px;          
+    height: 240px;         
+    border-radius: 50%;    
     display: block;
-    margin: 0 auto;        /* Memastikan kedudukan kekal di tengah jika skrin mengecil */
+    margin: 0 auto;        
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border: 3px solid var(--card-bg); /* Bingkai dinamik mengikut tema semasa */
-    object-fit: cover;     /* Mengelakkan gambar wajah menjadi penyek atau herot */
+    border: 3px solid var(--card-bg); 
+    object-fit: cover;     
     transition: transform 0.3s ease, border-color 0.3s;
 }
 
@@ -286,7 +285,7 @@ h3 {
 /* Reka Bentuk Kad Portfolio Bersama Gambar */
 .blog-card {
     background: #222222 !important; 
-    border-radius: 8px; /* Ditambah kemasan bucu bulat lembut (8px) untuk kad */
+    border-radius: 8px; 
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border: 1px solid #333;
@@ -304,7 +303,7 @@ h3 {
 /* Kontainer Penampung Imej Kad */
 .card-image {
     width: 100%;
-    height: 180px; /* Diubah suai sedikit ketinggian kontainer visual imej agar kelihatan ideal */
+    height: 180px; 
     overflow: hidden;
     background: #1a1a1a;
     border-bottom: 1px solid #333;
@@ -313,7 +312,7 @@ h3 {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mengekalkan keaslian nisbah mockup reka bentuk anda */
+    object-fit: cover; 
     transition: transform 0.5s ease;
 }
 
@@ -347,6 +346,66 @@ h3 {
     line-height: 1.5;
 }
 
+/* ==========================================
+   KEMAS KINI KHAS: PORTFOLIO PRODUKSI 3D (IMEJ & VIDEO BERSAME)
+   ========================================== */
+
+/* Kontainer Imej Kolaj / Model 3D */
+.card-image-prod {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.card-image-prod img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Kontainer Responsif Pemain Video YouTube 16:9 di dalam Grid Kad */
+.card-video-container {
+    position: relative;
+    width: 100%;
+    height: 180px; /* Menyamakan ketinggian dengan kad imej di sebelah */
+    background: #000;
+    border-bottom: 1px solid #333;
+}
+
+.card-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Butang Tambahan: View in Canva Site (Optional) */
+.canva-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    width: max-content;
+}
+
+.canva-btn:hover {
+    background-color: #ffcc00;
+    color: #161616;
+}
+
 /* Penyelarasan Automatik Warna Tema Terang Sekiranya Dinyahaktif */
 [data-theme="light"] .portfolio-accordion {
     background: #ffffff;
@@ -373,7 +432,15 @@ h3 {
 }
 [data-theme="light"] .category-tag,
 [data-theme="light"] .arrow-icon {
-    color: #0077cc !important; /* Warna biru kontras yang disesuaikan untuk tema cerah */
+    color: #0077cc !important; 
+}
+[data-theme="light"] .canva-btn {
+    color: #0077cc;
+    border-color: #0077cc;
+}
+[data-theme="light"] .canva-btn:hover {
+    background-color: #0077cc;
+    color: #ffffff;
 }
 
 /* ==========================================
