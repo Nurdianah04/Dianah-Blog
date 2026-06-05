@@ -2,20 +2,21 @@
    0. TETAPAN UNTUK STRUKTUR TEMA (DATA-THEME)
    ========================================== */
 :root {
-    --bg-color: #f9f9f9;
-    --text-color: #333333;
+    /* DEFAULT (LIGHT MODE) - Ditukar kepada gandingan Sky Blue & Terang */
+    --bg-color: #f0f6fc;
+    --text-color: #1f2328;
     --card-bg: #ffffff;
-    --heading-color: #1a1a1a;
-    --border-color: #1a1a1a;
+    --heading-color: #0a192f;
+    --border-color: #00bfff;
 }
 
-/* Penukaran warna apabila data-theme="dark" aktif */
+/* Penukaran warna apabila data-theme="dark" aktif (DARK BLUE & SKY BLUE) */
 [data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --card-bg: #1e1e1e;
-    --heading-color: #ffffff;
-    --border-color: #ffffff;
+    --bg-color: #0a192f;       /* Biru Gelap (Deep Navy) */
+    --text-color: #e2e8f0;     /* Putih lembut kebiruan */
+    --card-bg: #112240;        /* Biru Sederhana untuk kad & borang */
+    --heading-color: #ffffff;  /* Putih bersih */
+    --border-color: #00bfff;   /* Sky Blue */
 }
 
 /* ==========================================
@@ -36,21 +37,23 @@ body {
 }
 
 /* ==========================================
-   2. NAVIGATION BAR
+   2. NAVIGATION BAR (Kini Berlatarkan Biru Sangat Gelap)
    ========================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a1a1a;
+    background-color: #020c1b; /* Biru Tersangat Gelap */
     padding: 20px 5%;
     color: white;
+    border-bottom: 1px solid #112240;
 }
 
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 1px;
+    color: #00bfff; /* Logo sentiasa Sky Blue */
 }
 
 .nav-links {
@@ -64,22 +67,22 @@ body {
 }
 
 .nav-links a {
-    color: #ccc;
+    color: #8892b0;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+    color: #00bfff; /* Hover bertukar ke Sky Blue */
+    border-bottom: 2px solid #00bfff;
 }
 
 /* Gaya Butang Toggle */
 .toggle-btn {
-    background: #333;
-    color: #fff;
-    border: 1px solid #555;
+    background: #112240;
+    color: #00bfff;
+    border: 1px solid #00bfff;
     padding: 6px 14px;
     border-radius: 20px;
     cursor: pointer;
@@ -89,9 +92,9 @@ body {
 }
 
 [data-theme="dark"] .toggle-btn {
-    background: #ffffff;
-    color: #1a1a1a;
-    border-color: #ffffff;
+    background: #00bfff;
+    color: #020c1b;
+    border-color: #00bfff;
 }
 
 /* ==========================================
@@ -103,7 +106,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/background.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(2, 12, 27, 0.7), rgba(10, 25, 47, 0.7)), url('images/background.png') no-repeat center center/cover;
     color: white;
     padding: 0 20px;
 }
@@ -111,17 +114,19 @@ body {
 .hero-content h1 {
     font-size: 40px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
 .hero-content p {
     font-size: 18px;
     margin-bottom: 30px;
+    color: #8892b0;
 }
 
 .btn {
     display: inline-block;
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: #00bfff; /* Butang Utama Sky Blue */
+    color: #020c1b;
     padding: 10px 25px;
     text-decoration: none;
     font-weight: bold;
@@ -130,7 +135,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #ddd;
+    background-color: #90e0ef; /* Sky Blue lebih cair semasa hover */
 }
 
 /* ==========================================
@@ -174,8 +179,8 @@ h3 {
     border-radius: 50%;    
     display: block;
     margin: 0 auto;        
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    border: 3px solid var(--card-bg); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--border-color); /* Sempadan Bulatan Menggunakan Sky Blue */
     object-fit: cover;     
     transition: transform 0.3s ease, border-color 0.3s;
 }
@@ -198,13 +203,13 @@ h3 {
 }
 
 /* ==========================================
-   GAYA HALAMAN BLOG (ACCORDION REKA BENTUK GELAP DENGAN SKY BLUE)
+   GAYA HALAMAN BLOG (ACCORDION REKA BENTUK DARK BLUE & SKY BLUE)
    ========================================== */
 
 /* Struktur Utama Kotak Accordion */
 .portfolio-accordion {
-    background: #1e1e1e; 
-    border: 1px solid #333;
+    background: #112240; /* Sesuai dengan var(--card-bg) dalam Dark Mode */
+    border: 1px solid #233554;
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -232,7 +237,7 @@ h3 {
 }
 
 .accordion-header:hover {
-    background: #252525;
+    background: #1d335c; /* Biru sedikit terang semasa hover header */
 }
 
 .header-info h3 {
@@ -252,7 +257,7 @@ h3 {
 
 .click-hint {
     font-size: 12px;
-    color: #aaa;
+    color: #8892b0;
     margin: 0;
 }
 
@@ -271,8 +276,8 @@ h3 {
 /* Ruangan Kandungan Grid Kad di dalam Accordion */
 .accordion-content {
     padding: 0 25px 35px 25px;
-    background: #161616;
-    border-top: 1px solid #2a2a2a;
+    background: #0a192f; /* Berlatarkan Dark Blue Tulen */
+    border-top: 1px solid #233554;
 }
 
 .blog-grid {
@@ -284,11 +289,11 @@ h3 {
 
 /* Reka Bentuk Kad Portfolio Bersama Gambar */
 .blog-card {
-    background: #222222 !important; 
+    background: #112240 !important; /* Kad bertukar kepada navy munasabah */
     border-radius: 8px; 
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border: 1px solid #333;
+    border: 1px solid #233554;
     display: flex;
     flex-direction: column;
     padding: 0 !important; 
@@ -297,7 +302,7 @@ h3 {
 
 .blog-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.2); /* Bayang lembut Sky Blue */
 }
 
 /* Kontainer Penampung Imej Kad */
@@ -305,8 +310,8 @@ h3 {
     width: 100%;
     height: 180px; 
     overflow: hidden;
-    background: #1a1a1a;
-    border-bottom: 1px solid #333;
+    background: #020c1b;
+    border-bottom: 1px solid #233554;
 }
 
 .card-image img {
@@ -336,14 +341,44 @@ h3 {
 
 .card-text .date {
     font-size: 11px;
-    color: #888;
+    color: #8892b0;
     margin-bottom: 10px;
 }
 
 .card-text p {
     font-size: 13px;
-    color: #cccccc;
+    color: #ccd6f6;
     line-height: 1.5;
+}
+
+/* ==========================================
+   GAYA INTERFAS BUTANG VIDEO (WATCH BUTTON)
+   ========================================== */
+.watch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 2px solid #00bfff !important; /* Kemasan sempadan Sky Blue */
+    color: #00bfff !important;            /* Tulisan warna Sky Blue */
+    background: transparent;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: auto; /* Memastikan butang rapat ke bawah kad jika ada flex */
+    width: max-content;
+}
+
+.watch-btn:hover {
+    background-color: #00bfff !important;  /* Latar penuh Sky Blue bila dipicit */
+    color: #0a192f !important;            /* Tulisan bertukar jadi Dark Blue */
+}
+
+.watch-btn svg {
+    fill: currentColor; /* Warna ikon SVG akan mengikut warna tulisan secara automatik */
 }
 
 /* ==========================================
@@ -355,8 +390,8 @@ h3 {
     width: 100%;
     height: 180px;
     overflow: hidden;
-    background: #1a1a1a;
-    border-bottom: 1px solid #333;
+    background: #020c1b;
+    border-bottom: 1px solid #233554;
 }
 
 .card-image-prod img {
@@ -369,9 +404,9 @@ h3 {
 .card-video-container {
     position: relative;
     width: 100%;
-    height: 180px; /* Menyamakan ketinggian dengan kad imej di sebelah */
+    height: 180px;
     background: #000;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #233554;
 }
 
 .card-video-container iframe {
@@ -383,14 +418,14 @@ h3 {
     border: none;
 }
 
-/* Butang Tambahan: View in Canva Site (Optional) */
+/* Butang Tambahan: View in Canva Site */
 .canva-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     background-color: transparent;
-    color: #ffcc00;
-    border: 1px solid #ffcc00;
+    color: #00bfff;
+    border: 1px solid #00bfff;
     padding: 8px 16px;
     font-size: 13px;
     font-weight: bold;
@@ -402,8 +437,8 @@ h3 {
 }
 
 .canva-btn:hover {
-    background-color: #ffcc00;
-    color: #161616;
+    background-color: #00bfff;
+    color: #0a192f;
 }
 
 /* Penyelarasan Automatik Warna Tema Terang Sekiranya Dinyahaktif */
@@ -421,7 +456,7 @@ h3 {
 }
 [data-theme="light"] .header-info h3, 
 [data-theme="light"] .card-text h3 {
-    color: #1a1a1a !important;
+    color: #0a192f !important;
 }
 [data-theme="light"] .blog-card {
     background: #ffffff !important;
@@ -450,7 +485,8 @@ h3 {
     background: var(--card-bg);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border: 1px solid #233554;
     margin-top: 20px;
     transition: background-color 0.3s;
 }
@@ -469,16 +505,23 @@ h3 {
 .form-group input, .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #233554;
     border-radius: 4px;
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Fokus input kotak form bercahaya Sky Blue */
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
+}
+
 .submit-btn {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #00bfff;
+    color: #020c1b;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -488,30 +531,31 @@ h3 {
 }
 
 [data-theme="dark"] .submit-btn {
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: #00bfff;
+    color: #020c1b;
 }
 
 .submit-btn:hover {
-    background-color: #333;
+    background-color: #90e0ef;
 }
 
 [data-theme="dark"] .submit-btn:hover {
-    background-color: #ddd;
+    background-color: #90e0ef;
 }
 
 /* ==========================================
    5. FOOTER STYLES
    ========================================== */
 footer {
-    background-color: #1a1a1a;
-    color: #888;
+    background-color: #020c1b; /* Senada dengan Navbar */
+    color: #8892b0;
     text-align: center;
     padding: 15px;
     font-size: 14px;
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top: 1px solid #112240;
 }
 
 /* ==========================================
