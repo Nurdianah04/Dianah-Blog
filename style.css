@@ -193,13 +193,88 @@ h3 {
     flex: 2;
 }
 
-.skills-list {
-    margin-left: 20px;
-    margin-top: 10px;
+/* Kemas Kini Teks Pengenalan Nama */
+.about-text .intro-p {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 10px;
 }
 
-.skills-list li {
-    margin-bottom: 5px;
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Gaya Seksyen Vision & Goals (Reka Bentuk Bergaris Tepi) */
+.vision-section {
+    margin-top: 25px;
+    padding-left: 20px;
+    border-left: 3px solid var(--border-color); /* Garis tepi menegak Sky Blue */
+}
+
+.vision-section h3 {
+    margin-top: 0 !important;
+}
+
+/* --- REKA BENTUK GRID KAD KEMAHIRAN (SKILL CARDS) --- */
+.skills-section {
+    margin-top: 35px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 191, 255, 0.2); /* Sempadan lembut Sky Blue */
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+
+/* Kesan interaktif (Hover Effect) */
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-color);
+    box-shadow: 0 6px 15px rgba(0, 191, 255, 0.25); /* Cahaya lembut Sky Blue */
+}
+
+.skill-icon {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.skill-card h4 {
+    font-size: 14px;
+    color: var(--heading-color);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.skill-card p {
+    font-size: 12px !important;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Penyelarasan Khusus Light Mode untuk Kad */
+[data-theme="light"] .skill-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+[data-theme="light"] .skill-card:hover {
+    border-color: var(--border-color);
+    box-shadow: 0 6px 15px rgba(0, 191, 255, 0.15);
 }
 
 /* ==========================================
