@@ -60,9 +60,7 @@ Dianah-Blog/
 
 ## 5. How to Run the Project
 
-1. Clone or download this repository
-2. Open the `index.html` file
-3. Run the website using any web browser
+https://drive.google.com/drive/folders/1AJBX_PbBSszMaZUckOSg5azBOmijmyY-?usp=sharing 
 
 ---
 
