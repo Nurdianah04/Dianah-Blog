@@ -80,6 +80,11 @@ This project was developed to:
 * Practice using GitHub and GitHub Pages
 
 ---
+## 8. GitHub Repository
+
+https://github.com/Nurdianah04/Dianah-Blog
+
+---
 
 ## 8. Author
 
